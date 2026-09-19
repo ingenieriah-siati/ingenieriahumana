@@ -1,0 +1,561 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Curso universitario interactivo de Ingeniería Humana: coaching, valores, competencias, lenguaje, emoción, cuerpo y liderazgo.">
+<title>Ingeniería Humana · Curso universitario</title>
+<style>
+:root{
+  --ink:#10233f;--muted:#60708a;--paper:#f5f8fc;--white:#fff;--line:#dbe4ef;
+  --accent:#176b87;--accent2:#e46b4f;--soft:#e8f5f7;--warn:#fff4cf;--research:#eaf1ff;
+  --blue:#1e4f91;--cyan:#18a6a6;--coral:#ef765d;--gold:#e9b44c;--violet:#7056b8;
+  --max:1180px;--radius:16px;--shadow:0 10px 30px rgba(20,35,35,.07)
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:
+radial-gradient(circle at 88% 8%,rgba(24,166,166,.10),transparent 25rem),
+radial-gradient(circle at 8% 24%,rgba(112,86,184,.08),transparent 23rem),
+var(--paper);line-height:1.65}
+a{color:var(--accent);text-underline-offset:3px}button,input,textarea{font:inherit}.skip{position:absolute;left:-999px}.skip:focus{left:1rem;top:1rem;background:#fff;padding:.7rem;z-index:999}
+header{position:sticky;top:0;z-index:50;background:rgba(245,248,252,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.top{max-width:var(--max);margin:auto;display:flex;align-items:center;gap:1rem;padding:.7rem 1rem}.brand{font-weight:800;letter-spacing:.04em}.menu{margin-left:auto;display:flex;gap:.25rem;flex-wrap:wrap}.menu a{padding:.45rem .65rem;text-decoration:none;font-size:.83rem;border-radius:999px}.menu a:hover,.menu a:focus{background:var(--soft)}
+.hamb{display:none;margin-left:auto;border:1px solid var(--line);background:#fff;border-radius:10px;padding:.5rem .7rem}
+.progress{height:4px;background:#e4e4df}.progress>div{height:100%;background:var(--accent);width:0;transition:width .25s}
+main{max-width:var(--max);margin:auto;padding:0 1rem 5rem}.hero{min-height:74vh;display:grid;grid-template-columns:1.2fr .8fr;gap:3rem;align-items:center;padding:5rem 0 3rem}
+.eyebrow{text-transform:uppercase;letter-spacing:.16em;font-weight:700;font-size:.76rem;color:var(--accent)}h1{font-family:Georgia,serif;font-size:clamp(3rem,8vw,6.5rem);line-height:.93;margin:.25rem 0 1.25rem;letter-spacing:-.045em}h2{font-family:Georgia,serif;font-size:clamp(2rem,4vw,3.2rem);line-height:1.05;margin:.2rem 0 1rem}h3{font-size:1.45rem;margin:2.4rem 0 .7rem}h4{font-size:1.08rem;margin:1.4rem 0 .4rem}.lead{font-size:1.18rem;max-width:760px;color:#344447}.cta{display:inline-block;margin-top:1rem;background:var(--ink);color:#fff;text-decoration:none;padding:.8rem 1rem;border-radius:10px;font-weight:700}
+.hero-art{border:1px solid var(--line);background:#fff;min-height:430px;border-radius:28px;box-shadow:var(--shadow);padding:2rem;display:flex;flex-direction:column;justify-content:center}
+.route{display:flex;flex-wrap:wrap;align-items:center;gap:.55rem;font-weight:700}.route span{border:1px solid var(--line);background:#fff;padding:.55rem .7rem;border-radius:999px}.route b{color:var(--accent)}
+section{scroll-margin-top:90px}.unit{padding:5rem 0;border-top:1px solid var(--line)}.unit-head{display:grid;grid-template-columns:.7fr 1.3fr;gap:2rem;margin-bottom:2.5rem}.num{font-size:5rem;font-family:Georgia,serif;color:#a7b3af;line-height:1}
+.objectives,.grid2,.grid3{display:grid;gap:1rem}.grid2{grid-template-columns:repeat(2,1fr)}.grid3{grid-template-columns:repeat(3,1fr)}.objectives{grid-template-columns:repeat(2,1fr)}
+.card,.callout,.lab,.evidence,.research,.limit,.critical{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:1.25rem;box-shadow:0 4px 18px rgba(20,35,35,.035)}
+.lab{border-left:5px solid #547a91}.evidence{border-left:5px solid #7a674c}.research{background:var(--research);border-left:5px solid #657d9b}.limit{background:#fff8ea;border-left:5px solid #b07931}.critical{background:#f4efea;border-left:5px solid var(--accent2)}
+.tag{font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;font-weight:800;color:var(--muted)}.bigline{font-family:Georgia,serif;font-size:1.6rem;line-height:1.2}
+.diagram{overflow:auto;padding:1rem 0}.flow{min-width:max-content;display:flex;align-items:center;gap:.55rem}.flow .node{background:#fff;border:1px solid var(--line);padding:.8rem 1rem;border-radius:12px;font-weight:750}.arrow{color:var(--accent);font-weight:900}
+table{width:100%;border-collapse:collapse;background:#fff}th,td{text-align:left;padding:.8rem;border-bottom:1px solid var(--line);vertical-align:top}th{background:#eef1ed}
+details{background:#fff;border:1px solid var(--line);border-radius:12px;margin:.7rem 0;padding:.9rem 1rem}summary{cursor:pointer;font-weight:750}
+button{cursor:pointer;border:1px solid var(--line);background:#fff;padding:.65rem .8rem;border-radius:9px}button.primary{background:var(--accent);color:#fff;border-color:var(--accent)}button.reviewed{background:#dfece7}
+.interactive{margin:1rem 0}.choice{display:flex;gap:.5rem;flex-wrap:wrap}.feedback{margin-top:.8rem;padding:.8rem;background:var(--soft);border-radius:10px;display:none}
+.filters{display:flex;gap:.5rem;flex-wrap:wrap;margin:1rem 0}.filters button.active{background:var(--ink);color:#fff}.resource{margin:.7rem 0}.resource[hidden]{display:none}
+input[type="search"],textarea{width:100%;border:1px solid var(--line);background:#fff;border-radius:10px;padding:.8rem}textarea{min-height:150px}
+.glossary{display:grid;grid-template-columns:repeat(2,1fr);gap:.8rem;margin-top:1rem}.term{background:#fff;border:1px solid var(--line);border-radius:12px;padding:1rem}.term strong{display:block;text-transform:capitalize}
+.footer-nav{display:flex;justify-content:space-between;gap:1rem;margin-top:2rem}.muted{color:var(--muted)}.note{font-size:.9rem;color:var(--muted)}
+.placeholder{min-height:230px;border:1px dashed #9aa6a2;border-radius:18px;background:linear-gradient(135deg,#f0f2ed,#fff);display:grid;place-items:center;text-align:center;padding:2rem;color:var(--muted)}
+.checklist label{display:block;margin:.45rem 0}.final{padding:5rem 0}.final-words{display:flex;gap:.5rem;flex-wrap:wrap}.final-words span{font-family:Georgia,serif;font-size:1.5rem;border-bottom:2px solid var(--accent);padding:.2rem}
+:focus-visible{outline:3px solid #d19b4d;outline-offset:3px}
+@media(max-width:850px){.hero,.unit-head,.grid2,.grid3,.objectives{grid-template-columns:1fr}.hero{padding-top:3rem}.hero-art{min-height:300px}.menu{display:none;position:absolute;top:58px;left:0;right:0;background:#f5f8fc;padding:1rem;border-bottom:1px solid var(--line)}.menu.open{display:grid}.hamb{display:block}.glossary{grid-template-columns:1fr}table{display:block;overflow-x:auto}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+
+/* Visual refresh */
+.hero{position:relative;isolation:isolate}
+.hero:before{content:"";position:absolute;z-index:-1;right:-5vw;top:6%;width:36vw;height:36vw;border-radius:50%;background:linear-gradient(135deg,rgba(24,166,166,.17),rgba(112,86,184,.12));filter:blur(2px)}
+.hero h1{background:linear-gradient(110deg,var(--blue),var(--cyan) 58%,var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-art{position:relative;overflow:hidden;border:0;background:linear-gradient(145deg,#123b62,#176b87 56%,#5a4a9b);color:#fff;box-shadow:0 25px 60px rgba(26,65,103,.22)}
+.hero-art:before,.hero-art:after{content:"";position:absolute;border:1px solid rgba(255,255,255,.22);border-radius:50%}
+.hero-art:before{width:270px;height:270px;right:-70px;top:-65px}.hero-art:after{width:150px;height:150px;left:-35px;bottom:-50px}
+.hero-art .eyebrow,.hero-art .note{color:rgba(255,255,255,.78)}.hero-art .route span{background:rgba(255,255,255,.11);border-color:rgba(255,255,255,.22);backdrop-filter:blur(8px)}.hero-art .route b{color:#9ce7df}
+.eyebrow{color:var(--blue)}
+.cta{background:linear-gradient(120deg,var(--blue),var(--accent));box-shadow:0 10px 24px rgba(30,79,145,.2);transition:transform .18s,box-shadow .18s}.cta:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(30,79,145,.28)}
+.unit{position:relative}.unit:nth-of-type(3n+1):before{content:"";position:absolute;left:50%;transform:translateX(-50%);top:1.2rem;width:100vw;height:180px;background:linear-gradient(90deg,transparent,rgba(24,166,166,.045),transparent);z-index:-1}
+.unit-head{align-items:start}.num{font-family:Inter,sans-serif;font-weight:900;font-size:clamp(5rem,10vw,8rem);letter-spacing:-.08em;color:transparent;-webkit-text-stroke:2px #bfd0df;opacity:.9}
+.card{transition:transform .18s,box-shadow .18s,border-color .18s}.card:hover{transform:translateY(-3px);box-shadow:0 14px 35px rgba(26,65,103,.09);border-color:#b9cfdf}
+.grid3 .card:nth-child(3n+1){border-top:4px solid var(--cyan)}.grid3 .card:nth-child(3n+2){border-top:4px solid var(--violet)}.grid3 .card:nth-child(3n){border-top:4px solid var(--coral)}
+.route span{box-shadow:0 5px 16px rgba(26,65,103,.06);border-color:#ccdae8}.route b{color:var(--coral)}
+.diagram{margin:1.2rem 0}.flow .node{border:0;background:linear-gradient(145deg,#fff,#edf5fb);box-shadow:0 8px 20px rgba(26,65,103,.08);color:var(--blue)}.arrow{color:var(--coral);font-size:1.2rem}
+.lab{background:linear-gradient(145deg,#f3fbff,#fff);border-left-color:#3b8db7}.evidence{background:linear-gradient(145deg,#fff9e8,#fff);border-left-color:var(--gold)}.research{background:linear-gradient(145deg,#edf2ff,#fff);border-left-color:var(--violet)}.limit{background:linear-gradient(145deg,#fff5e6,#fff);border-left-color:#e59b36}.critical{background:linear-gradient(145deg,#fff0ed,#fff);border-left-color:var(--coral)}
+.tag{display:inline-block;padding:.28rem .5rem;border-radius:6px;background:rgba(30,79,145,.07);color:var(--blue)}
+table{border-radius:14px;overflow:hidden;box-shadow:0 8px 25px rgba(26,65,103,.06)}th{background:linear-gradient(90deg,#163f68,#176b87);color:#fff}tbody tr:hover{background:#f2f8fb}
+details{box-shadow:0 6px 18px rgba(26,65,103,.05)}details[open]{border-color:#b9d1df;background:#fbfdff}
+button.primary{background:linear-gradient(120deg,var(--blue),var(--cyan));border:0}.filters button{transition:.18s}.filters button:hover{border-color:var(--accent);transform:translateY(-1px)}.filters button.active{background:linear-gradient(120deg,var(--blue),var(--accent));border-color:transparent}
+.placeholder{background:repeating-linear-gradient(135deg,#edf5fa,#edf5fa 16px,#f8fbfd 16px,#f8fbfd 32px);border-color:#a9c0d1}
+.final{margin-top:3rem;padding:4rem clamp(1.3rem,5vw,4rem);border-radius:30px;background:linear-gradient(135deg,#112f50,#176b87 58%,#5c4c9c);color:#fff;box-shadow:0 25px 60px rgba(26,65,103,.2)}.final .eyebrow,.final .lead,.final .note{color:#dcecf5}.final textarea{background:rgba(255,255,255,.96)}.final-words span{border-color:#8ee0d8}
+::selection{background:#b9ece7;color:#10233f}
+
+
+.visual-band{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(260px,.75fr);gap:1.2rem;margin:1.4rem 0 2rem}
+.visual-card,.video-card{margin:0;border-radius:20px;overflow:hidden;background:#fff;border:1px solid var(--line);box-shadow:0 12px 30px rgba(26,65,103,.09)}
+.visual-card img{display:block;width:100%;height:320px;object-fit:cover}
+.visual-card figcaption{padding:.72rem .9rem;color:var(--muted);font-size:.78rem;line-height:1.45}
+.visual-card figcaption a{font-weight:700}
+.video-card{padding:.8rem}
+.video-card .video-label{display:flex;align-items:center;gap:.45rem;margin:.1rem .15rem .65rem;color:var(--blue);font-weight:800;font-size:.82rem;text-transform:uppercase;letter-spacing:.06em}
+.video-wrap{position:relative;aspect-ratio:16/9;border-radius:14px;overflow:hidden;background:#10233f}
+.video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video-card h3{font-size:1rem;margin:.75rem .15rem .2rem}.video-card p{font-size:.86rem;color:var(--muted);margin:.25rem .15rem .55rem}
+.video-card>a{display:inline-block;margin:.1rem .15rem .35rem;font-size:.83rem;font-weight:800}
+.video-library{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin-top:1rem}
+.video-library .video-card{height:100%}
+.media-note{font-size:.78rem;color:var(--muted)}
+@media(max-width:780px){.visual-band,.video-library{grid-template-columns:1fr}.visual-card img{height:240px}}
+
+
+.video-thumb{position:relative;display:block;aspect-ratio:16/9;border-radius:14px;overflow:hidden;background:#10233f;text-decoration:none}
+.video-thumb img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .2s ease,filter .2s ease}
+.video-thumb:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(7,24,42,.35),transparent 58%)}
+.video-thumb .play{position:absolute;z-index:2;left:50%;top:50%;transform:translate(-50%,-50%);display:grid;place-items:center;width:64px;height:64px;border-radius:50%;background:#fff;color:#d92828;font-size:1.55rem;box-shadow:0 12px 30px rgba(0,0,0,.28);padding-left:4px}
+.video-thumb:hover img,.video-thumb:focus img{transform:scale(1.025);filter:brightness(.92)}
+.video-thumb:focus{outline:3px solid var(--cyan);outline-offset:3px}
+
+
+.svg-scene{margin:1.25rem 0;border-radius:22px;overflow:hidden;border:1px solid #cbdce8;background:linear-gradient(145deg,#eef7fb,#f8f5ff);box-shadow:0 14px 34px rgba(26,65,103,.08)}
+.svg-scene svg{display:block;width:100%;height:auto;max-height:280px}
+.svg-scene figcaption{padding:.65rem .9rem;color:var(--muted);font-size:.78rem;background:rgba(255,255,255,.72)}
+
+</style>
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<header>
+ <div class="top"><div class="brand">INGENIERÍA HUMANA</div>
+ <button class="hamb" id="hamb" aria-expanded="false" aria-controls="menu">Menú</button>
+ <nav class="menu" id="menu" aria-label="Navegación principal">
+  <a href="#inicio">Inicio</a><a href="#u1">U1</a><a href="#u2">U2</a><a href="#u3">U3</a><a href="#u4">U4</a><a href="#u5">U5</a><a href="#laboratorios">Laboratorios</a><a href="#recursos">Recursos</a><a href="#evaluacion">Evaluación</a><a href="#glosario">Glosario</a>
+ </nav></div>
+ <div class="progress" aria-label="Progreso del curso"><div id="progressBar"></div></div>
+</header>
+<main id="contenido">
+<section class="hero" id="inicio">
+ <div>
+  <div class="eyebrow">Asignatura universitaria · Licenciatura</div>
+  <h1>Ingeniería Humana</h1>
+  <h2>Comprender a las personas exige algo más que aprender técnicas.</h2>
+  <p class="lead">Durante este curso estudiaremos cómo las personas interpretan experiencias, toman decisiones, regulan emociones, construyen significado, conversan, establecen objetivos e influyen en otras personas.</p>
+  <p>Exploraremos herramientas de coaching, comunicación y liderazgo, pero también aprenderemos a cuestionarlas. Porque una herramienta útil no necesita convertirse en una verdad absoluta.</p>
+  <a class="cta" href="#proposito">Comenzar el recorrido</a>
+ </div>
+ <div class="hero-art" aria-label="Ruta conceptual del curso">
+   <svg viewBox="0 0 520 180" role="img" aria-label="Mapa visual de procesos humanos" style="width:100%;max-height:180px;margin-bottom:1.2rem">
+<defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="#8ee0d8"/><stop offset="1" stop-color="#d4c6ff"/></linearGradient></defs>
+<path d="M55 93 C115 20 172 154 238 83 S360 25 465 91" fill="none" stroke="url(#g)" stroke-width="3" opacity=".8"/>
+<path d="M55 93 C128 155 190 22 262 103 S385 152 465 91" fill="none" stroke="white" stroke-width="1.5" opacity=".28"/>
+<g fill="#fff"><circle cx="55" cy="93" r="11"/><circle cx="150" cy="72" r="8"/><circle cx="238" cy="83" r="11"/><circle cx="350" cy="70" r="8"/><circle cx="465" cy="91" r="11"/></g>
+<g fill="none" stroke="white" opacity=".45"><circle cx="55" cy="93" r="23"/><circle cx="238" cy="83" r="23"/><circle cx="465" cy="91" r="23"/></g>
+</svg>
+<div class="eyebrow">Ruta conceptual</div>
+   <div class="route"><span>Observar</span><b>↓</b><span>Interpretar</span><b>↓</b><span>Regular</span><b>↓</b><span>Conversar</span><b>↓</b><span>Actuar</span><b>↓</b><span>Liderar</span></div>
+   <hr style="width:100%;border:0;border-top:1px solid var(--line);margin:2rem 0">
+   
+ </div>
+</section>
+
+<section class="unit" id="proposito">
+ <div class="eyebrow">Propósito académico</div><h2>Objetivo general oficial</h2>
+ <p class="bigline">“Desarrollar una comprensión integral del ser humano mediante el reconocimiento de sus dimensiones lingüística, emocional y corporal, así como el fortalecimiento de valores, competencias y habilidades de liderazgo, para favorecer un desarrollo personal y profesional consciente, equilibrado y orientado a la transformación.”</p>
+ <div class="callout"><div class="tag">Identidad académica complementaria</div><p>Comprender cómo las personas interpretan, deciden, regulan, conversan y actúan para facilitar procesos responsables de desarrollo humano.</p></div>
+ <div class="diagram"><div class="flow"><span class="node">Coaching</span><span class="arrow">→</span><span class="node">Valores y competencias</span><span class="arrow">→</span><span class="node">Lenguaje y significado</span><span class="arrow">→</span><span class="node">Emoción y cuerpo</span><span class="arrow">→</span><span class="node">Liderazgo</span></div></div>
+ <div class="research"><div class="tag">Principio de trabajo</div><h3>Hecho · interpretación · evidencia · hipótesis · experiencia personal · afirmación popular</h3><p>El curso utiliza estas distinciones para analizar afirmaciones sobre desarrollo humano sin convertir intuiciones, modelos profesionales o experiencias individuales en hechos científicos universales.</p></div>
+</section>
+
+<section class="unit" id="u1">
+ <div class="unit-head"><div class="num">01</div><div><div class="eyebrow">Fundamentos del coaching</div><h2>Facilitar no es dirigir la vida de otra persona.</h2>
+<div class="visual-band" aria-label="Recursos visuales de la unidad">
+  <figure class="visual-card">
+    <img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Young%20people%20in%20conversation%20(Unsplash).jpg" alt="Conversación y escucha como práctica relacional.">
+    <figcaption>Conversación y escucha como práctica relacional.<br><a target="_blank" rel="noopener noreferrer" href="https://commons.wikimedia.org/wiki/File:Young_people_in_conversation_(Unsplash).jpg">Crédito y licencia: Alexis Brown / Wikimedia Commons (origen: Unsplash) ↗</a></figcaption>
+  </figure>
+  <article class="video-card">
+    <div class="video-label">▶ Video recomendado</div>
+    <a class="video-thumb" href="https://www.youtube.com/watch?v=VKT4qEFSt4o" target="_blank" rel="noopener noreferrer" aria-label="Ver en YouTube: Modelo GROW en español">
+      <img loading="lazy" src="https://i.ytimg.com/vi/VKT4qEFSt4o/hqdefault.jpg" alt="Miniatura del video: Modelo GROW en español">
+      <span class="play" aria-hidden="true">▶</span>
+    </a>
+    <h3>Modelo GROW en español</h3>
+    <p>Recurso introductorio para observar la secuencia objetivo–realidad–opciones–acción. Contrasta el video con los criterios éticos y de autonomía de la unidad.</p>
+    <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=VKT4qEFSt4o">Ver video en YouTube ↗</a>
+  </article>
+</div>
+<figure class="svg-scene"><svg viewBox="0 0 900 270" role="img" aria-labelledby="svg1t">
+<title id="svg1t">Conversación de coaching basada en escucha, preguntas y acción</title>
+<defs><linearGradient id="a1" x1="0" x2="1"><stop stop-color="#176b87"/><stop offset="1" stop-color="#7056b8"/></linearGradient></defs>
+<rect width="900" height="270" fill="#f3f9fc"/><circle cx="155" cy="135" r="78" fill="#d9f1f2"/><circle cx="745" cy="135" r="78" fill="#eee7fb"/>
+<circle cx="155" cy="105" r="29" fill="#176b87"/><path d="M105 200q50-80 100 0" fill="#176b87"/>
+<circle cx="745" cy="105" r="29" fill="#7056b8"/><path d="M695 200q50-80 100 0" fill="#7056b8"/>
+<path d="M260 92h185q18 0 18 18v48q0 18-18 18h-105l-30 28 8-28h-58q-18 0-18-18v-48q0-18 18-18z" fill="url(#a1)"/>
+<circle cx="315" cy="134" r="8" fill="white"/><circle cx="353" cy="134" r="8" fill="white"/><circle cx="391" cy="134" r="8" fill="white"/>
+<path d="M493 108h145q16 0 16 16v36q0 16-16 16h-45l7 25-28-25h-79q-16 0-16-16v-36q0-16 16-16z" fill="#ef765d"/>
+<path d="M545 142l15 15 35-42" fill="none" stroke="white" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><figcaption>Escuchar → preguntar → clarificar → convertir la conversación en una acción elegida.</figcaption></figure><p>El coaching suele presentarse como una colección de preguntas poderosas, técnicas de motivación o herramientas para alcanzar objetivos. Aquí comenzamos por la relación, el alcance razonable de la práctica y sus límites.</p></div></div>
+ <div class="objectives card"><div><strong>Al finalizar podrás:</strong><ul><li>Definir coaching.</li><li>Distinguirlo de mentoring, consultoría, capacitación y psicoterapia.</li><li>Reconocer ámbitos de aplicación.</li></ul></div><div><ul><li>Utilizar escucha y preguntas exploratorias.</li><li>Aplicar una estructura básica GROW.</li><li>Reconocer límites profesionales y dilemas éticos.</li></ul></div></div>
+ <h3>1.1 ¿Qué es coaching?</h3><p>Proceso de acompañamiento orientado a facilitar reflexión, clarificación de objetivos, exploración de alternativas y acción. Su utilidad depende del contexto, el acuerdo de trabajo y la competencia profesional.</p>
+ <div class="grid2">
+  <div class="card"><strong>Coaching</strong><p>¿Cómo puedo facilitar que explores y actúes?</p></div><div class="card"><strong>Mentoría</strong><p>¿Qué puedo compartir desde mi experiencia?</p></div>
+  <div class="card"><strong>Consultoría</strong><p>¿Qué solución especializada puedo recomendar?</p></div><div class="card"><strong>Capacitación</strong><p>¿Qué conocimiento o habilidad necesito enseñar?</p></div>
+  <div class="card"><strong>Psicoterapia</strong><p>¿Qué situación requiere evaluación o intervención clínica?</p></div><div class="card"><strong>Distinción clave</strong><p>Ninguna disciplina es superior a las demás. Responden a necesidades distintas.</p></div>
+ </div>
+ <p><a target="_blank" rel="noopener noreferrer" href="https://www.coachingfederation.es/definicion-coaching">Lectura esencial: International Coaching Federation España — definición de coaching</a></p>
+
+ <h3>1.2 ¿Coaching o no?</h3>
+ <div class="lab interactive"><div class="tag">Laboratorio de criterio profesional</div><p id="caseText"></p><div class="choice" id="caseChoices"></div><textarea id="caseWhy" aria-label="Justificación" placeholder="Justifica tu elección. Si el caso admite más de una intervención, explica por qué."></textarea><button class="primary" id="nextCase">Siguiente caso</button><div class="feedback" id="caseFeedback"></div></div>
+
+ <h3>1.3 Historia y desarrollo</h3><p>El coaching contemporáneo se ha desarrollado desde distintas influencias y contextos profesionales. Compartir el uso de preguntas con tradiciones antiguas no demuestra una genealogía directa.</p>
+ <div class="research"><div class="tag">Mirada de investigación</div><p>Que una práctica contemporánea utilice preguntas no significa que exista continuidad histórica directa con el método socrático.</p></div>
+ <h3>1.4 Campos del coaching</h3><div class="route"><span>Ejecutivo</span><span>Organizacional</span><span>Desarrollo profesional</span><span>Equipos</span><span>Desempeño</span><span>Desarrollo personal</span></div><p>Los límites profesionales dependen del contexto, la preparación del profesional y la naturaleza de la situación.</p>
+ <h3>1.5 Escucha</h3><h4>Escuchar no es esperar tu turno para hablar.</h4><div class="diagram"><div class="flow"><span class="node">Oír</span><span class="arrow">→</span><span class="node">Interpretar</span><span class="arrow">→</span><span class="node">Verificar</span><span class="arrow">→</span><span class="node">Responder</span></div></div>
+ <p>Verificar reduce el riesgo de confundir nuestra interpretación con lo que la otra persona quiso decir. Prueba: “Lo que entiendo que estás diciendo es…” y “¿Eso representa lo que quieres decir?”</p>
+ <div class="lab"><div class="tag">Laboratorio de escucha</div><p>A habla dos minutos. B no aconseja, interrumpe, cuenta su propia experiencia ni soluciona el problema. B solamente pregunta, parafrasea, aclara y verifica. Después intercambian roles.</p><p><strong>Reflexiona:</strong> ¿Cuándo apareció el impulso de dar un consejo?</p></div>
+ <h3>1.6 Preguntas</h3><div class="grid2"><div class="card"><strong>Directiva</strong><p>“¿No crees que deberías cambiar de trabajo?”</p></div><div class="card"><strong>Exploratoria</strong><p>“¿Qué alternativas estás considerando?”</p></div></div>
+ <div class="grid3"><div class="card"><strong>Clarificación</strong><p>¿Qué significa para ti sentirte estancado?</p></div><div class="card"><strong>Evidencia</strong><p>¿Qué te hace pensar eso?</p></div><div class="card"><strong>Perspectiva</strong><p>¿Qué otra interpretación podría existir?</p></div><div class="card"><strong>Alternativas</strong><p>¿Qué opciones todavía no has considerado?</p></div><div class="card"><strong>Acción</strong><p>¿Cuál podría ser el siguiente paso?</p></div></div>
+ <h3>1.7 Modelo GROW</h3><div class="diagram"><div class="flow"><span class="node">G · Goal<br>Objetivo</span><span class="arrow">→</span><span class="node">R · Reality<br>Realidad</span><span class="arrow">→</span><span class="node">O · Options<br>Opciones</span><span class="arrow">→</span><span class="node">W · Will / Way forward<br>Decisión y acción</span></div></div>
+ <p>G: ¿Qué quieres conseguir? · R: ¿Qué ocurre actualmente? · O: ¿Qué alternativas existen? · W: ¿Qué vas a hacer?</p><p><strong>GROW es una estructura para organizar una conversación. No es una fórmula universal para resolver cualquier problema.</strong></p>
+ <p><a target="_blank" rel="noopener noreferrer" href="https://extension.uned.es/actividad/15231">Referencia universitaria: UNED — metodología de coaching práctico y método GROW</a></p>
+ <div class="lab"><div class="tag">Laboratorio GROW</div><p>Tríadas: A = facilitador, B = persona participante, C = observador. 12 minutos por conversación y rotación de roles.</p><div class="checklist"><label><input type="checkbox"> Clarificó el objetivo.</label><label><input type="checkbox"> Exploró la situación actual.</label><label><input type="checkbox"> Escuchó antes de intervenir.</label><label><input type="checkbox"> Evitó consejos prematuros.</label><label><input type="checkbox"> Utilizó preguntas abiertas.</label><label><input type="checkbox"> Exploró alternativas.</label><label><input type="checkbox"> Dejó la decisión en la otra persona.</label><label><input type="checkbox"> Estableció una acción concreta.</label><label><input type="checkbox"> Reconoció límites cuando fue necesario.</label></div></div>
+ <h3>1.8 Ética y límites profesionales</h3><div class="limit"><div class="tag">Límite profesional</div><p>¿Tengo competencia para intervenir? ¿Estoy facilitando o imponiendo? ¿Existe una relación de poder? ¿Prometo resultados que no puedo garantizar? ¿Existe conflicto de intereses? ¿La situación requiere otro profesional? ¿La confidencialidad tiene límites relevantes?</p><p>El Código Ético de ICF indicado en el programa entró en vigor el 1 de abril de 2025.</p><p><a target="_blank" rel="noopener noreferrer" href="https://coachingfederation.org/credentialing/coaching-ethics/icf-code-of-ethics/">Código Ético ICF</a> · <a target="_blank" rel="noopener noreferrer" href="https://coachingfederation.org/language/spanish/">Recursos ICF en español</a></p></div>
+ <div class="critical myth"><div class="tag">Ingeniería o ingenuidad 1</div><h3>“Un buen coach tiene la respuesta correcta.”</h3><button aria-expanded="false">Analizar afirmación</button><div hidden><p><strong>Parte defendible:</strong> la experiencia y formación pueden ayudar a estructurar procesos y reconocer problemas.</p><p><strong>Problema:</strong> confunde facilitación con consultoría o consejo experto y puede reducir autonomía.</p><p><strong>Reformulación:</strong> un proceso de coaching puede facilitar reflexión, objetivos y alternativas sin asumir que el coach posee la solución correcta para la vida de otra persona.</p><p class="bigline">Facilitar ≠ decidir por alguien.</p></div></div>
+ <div class="evidence"><div class="tag">Evidencia unidad 1</div><h3>Bitácora de conversación de coaching</h3><p>Entrega: situación, objetivo, preguntas utilizadas, información obtenida, opciones identificadas, acción acordada, reflexión personal y límite profesional identificado.</p></div>
+ <button class="review" data-unit="u1">Marcar unidad 1 como revisada</button>
+</section>
+
+<section class="unit" id="u2">
+ <div class="unit-head"><div class="num">02</div><div><div class="eyebrow">Valores, competencias y agencia</div><h2>Entre lo que valoramos y lo que realmente hacemos.</h2>
+<div class="visual-band" aria-label="Recursos visuales de la unidad">
+  <figure class="visual-card">
+    <img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Students%20learning%20together%20(Unsplash).jpg" alt="Aprendizaje, agencia y toma de decisiones en contexto.">
+    <figcaption>Aprendizaje, agencia y toma de decisiones en contexto.<br><a target="_blank" rel="noopener noreferrer" href="https://commons.wikimedia.org/wiki/File:Students_learning_together_(Unsplash).jpg">Crédito y licencia: Alexis Brown / Wikimedia Commons (origen: Unsplash) ↗</a></figcaption>
+  </figure>
+  <article class="video-card">
+    <div class="video-label">▶ Video recomendado</div>
+    <a class="video-thumb" href="https://www.youtube.com/watch?v=NLqeWdRJ6Eg" target="_blank" rel="noopener noreferrer" aria-label="Ver en YouTube: Sesgos cognitivos al descubierto — Universidad Nacional de Colombia">
+      <img loading="lazy" src="https://i.ytimg.com/vi/NLqeWdRJ6Eg/hqdefault.jpg" alt="Miniatura del video: Sesgos cognitivos al descubierto — Universidad Nacional de Colombia">
+      <span class="play" aria-hidden="true">▶</span>
+    </a>
+    <h3>Sesgos cognitivos al descubierto — Universidad Nacional de Colombia</h3>
+    <p>Úsalo para identificar cómo los atajos cognitivos pueden influir en juicios y decisiones, y qué evidencia adicional conviene buscar.</p>
+    <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=NLqeWdRJ6Eg">Ver video en YouTube ↗</a>
+  </article>
+</div>
+<figure class="svg-scene"><svg viewBox="0 0 900 270" role="img" aria-labelledby="svg2t"><title id="svg2t">Mapa de decisión entre valores, contexto, evidencia y acción</title>
+<rect width="900" height="270" fill="#f7f9ff"/><g fill="none" stroke="#b7c9dc" stroke-width="4"><path d="M450 135L190 65M450 135L190 205M450 135L710 65M450 135L710 205"/></g>
+<circle cx="450" cy="135" r="70" fill="#176b87"/><path d="M418 136l22 22 48-55" fill="none" stroke="white" stroke-width="11" stroke-linecap="round"/>
+<g><circle cx="190" cy="65" r="46" fill="#ef765d"/><path d="M190 37l9 18 20 3-14 14 3 20-18-9-18 9 3-20-14-14 20-3z" fill="white"/>
+<circle cx="190" cy="205" r="46" fill="#e9b44c"/><path d="M168 205h44M190 183v44" stroke="white" stroke-width="10" stroke-linecap="round"/>
+<circle cx="710" cy="65" r="46" fill="#7056b8"/><path d="M687 75q23-42 46 0M698 54h24" fill="none" stroke="white" stroke-width="7"/>
+<circle cx="710" cy="205" r="46" fill="#18a6a6"/><path d="M684 207l18 18 35-43" fill="none" stroke="white" stroke-width="9" stroke-linecap="round"/></g>
+</svg><figcaption>La agencia no ocurre en el vacío: valores, contexto, información disponible y consecuencias interactúan en cada decisión.</figcaption></figure><p>Decir que valoramos algo no demuestra automáticamente que nuestras decisiones sean coherentes con ello. Las personas pueden desarrollar capacidad de acción, pero ninguna persona actúa fuera de un contexto.</p></div></div>
+ <div class="diagram"><div class="flow"><span class="node">Valores</span><span class="arrow">→</span><span class="node">Decisiones</span><span class="arrow">→</span><span class="node">Conductas</span><span class="arrow">→</span><span class="node">Consecuencias</span><span class="arrow">↺</span><span class="node">Retroalimentación</span></div></div>
+ <h3>2.1 Valores y principios</h3><div class="grid2"><div class="card"><strong>Valor declarado</strong><p>“Valoro mi desarrollo profesional.”</p></div><div class="card"><strong>Conducta observable</strong><p>¿Solicita retroalimentación? ¿Busca oportunidades de aprendizaje? ¿Practica? ¿Evalúa su progreso?</p></div></div>
+ <div class="lab"><div class="tag">Value Audit</div><p>Selecciona cinco valores. Para cada uno registra: conducta que podría demostrarlo → conducta que podría contradecirlo → evidencia disponible.</p><p class="note">No busca determinar si una persona es buena o mala; convierte conceptos abstractos en comportamientos observables.</p></div>
+ <h3>2.2 Autoconocimiento</h3><p>Distingue autopercepción de evidencia sobre la conducta. “Soy malo trabajando bajo presión” ofrece menos información operativa que “En las últimas tres entregas con plazos inferiores a 24 horas pospuse el inicio y cometí errores durante la revisión”.</p>
+ <div class="lab"><div class="tag">Evidencia sobre mí</div><p>Transforma cinco etiquetas personales en descripciones conductuales y contextuales.</p></div>
+ <h3>2.3 Competencias</h3><p><strong>Competencia = integración de conocimientos, habilidades y conductas aplicadas en un contexto.</strong> Evita tratarlas como identidades fijas. Convierte “Necesito ser más organizado” en tres conductas observables.</p>
+ <h3>2.4 Motivación</h3><p>La Teoría de la Autodeterminación distingue formas de motivación y estudia, entre otros elementos, autonomía, competencia y relación. No equivale a afirmar que la voluntad individual sea ilimitada.</p>
+ <div class="route"><span>Autonomía</span><span>Competencia</span><span>Relación</span></div>
+ <p><a target="_blank" rel="noopener noreferrer" href="https://selfdeterminationtheory.org/SDT/documents/2000_RyanDeci_SpanishAmPsych.pdf">Lectura esencial: Ryan y Deci — Teoría de la Autodeterminación, versión en español</a><br><a target="_blank" rel="noopener noreferrer" href="https://www.scielo.org.mx/scielo.php?pid=S2007-07052013000100010&script=sci_arttext">Lectura complementaria: implicaciones en el ámbito laboral</a></p><p class="bigline">Motivación ≠ fuerza de voluntad infinita.</p>
+ <h3>2.5 Metas y autorregulación</h3><div class="diagram"><div class="flow"><span class="node">Meta</span><span class="arrow">→</span><span class="node">Planificación</span><span class="arrow">→</span><span class="node">Acción</span><span class="arrow">→</span><span class="node">Monitoreo</span><span class="arrow">→</span><span class="node">Retroalimentación</span><span class="arrow">→</span><span class="node">Ajuste</span></div></div><p>Modificar un plan después de observar resultados no constituye necesariamente fracaso: puede ser autorregulación informada.</p>
+ <div class="lab"><div class="tag">De intención a conducta</div><p>Convierte “Quiero ser más disciplinado” en: contexto, conducta, frecuencia, indicador, obstáculo, respuesta y fecha de revisión.</p></div>
+ <h3>2.6 Toma de decisiones, heurísticos y sesgos</h3><p>Los heurísticos son atajos de razonamiento que pueden facilitar decisiones, especialmente bajo incertidumbre, pero también producir errores sistemáticos. Analiza disponibilidad, anclaje, confirmación, encuadre y costo hundido.</p><p><strong>Heurístico ≠ estupidez.</strong> Es un atajo cuyo efecto depende del contexto.</p>
+ <p><a target="_blank" rel="noopener noreferrer" href="https://gredos.usal.es/handle/10366/159151?locale-attribute=es&show=full">Nieto Carracedo — Heurísticos y decisión</a> · <a target="_blank" rel="noopener noreferrer" href="https://repositorio.uca.edu.ar/handle/123456789/6131/">Cortada de Kohan y Macbeth — sesgos cognitivos</a></p>
+ <div class="lab"><div class="tag">Laboratorio de decisiones</div><p>Toma una decisión con información incompleta. Después incorpora nueva información y analiza: ¿qué cambió?, ¿qué supusiste sin evidencia?, ¿qué información priorizaste?, ¿buscaste confirmación?, ¿qué pedirías antes de decidir?</p></div>
+ <h3>2.7 Agencia y contexto</h3><p class="bigline">Ni todo depende de ti, ni nada depende de ti.</p><p>La agencia puede entenderse como capacidad de actuar dentro de condiciones determinadas: recursos, relaciones, instituciones, economía, oportunidades, responsabilidades, restricciones y azar.</p>
+ <div class="grid3"><div class="card"><strong>Puedo controlar</strong></div><div class="card"><strong>Puedo influir</strong></div><div class="card"><strong>No puedo controlar</strong></div></div><p><strong>Pregunta:</strong> ¿Dónde tiene sentido invertir acción?</p>
+ <div class="critical myth"><div class="tag">Ingeniería o ingenuidad 2</div><h3>“Si realmente quieres algo, encontrarás la manera.”</h3><button aria-expanded="false">Analizar afirmación</button><div hidden><p><strong>Parte defendible:</strong> motivación, planificación, autorregulación y percepción de competencia pueden influir en la conducta.</p><p><strong>Problema:</strong> los resultados también dependen de oportunidades, recursos, relaciones y restricciones.</p><p><strong>Reformulación:</strong> la motivación y la autorregulación pueden aumentar nuestra capacidad de actuar sobre aquello que podemos influir, pero no eliminan las restricciones del contexto.</p></div></div>
+ <div class="evidence"><div class="tag">Evidencia unidad 2</div><h3>Mapa de autorregulación</h3><p>Objetivo, conducta observable, contexto, motivación, recursos, obstáculos, plan, indicador, sistema de seguimiento y estrategia de ajuste.</p></div>
+ <button class="review" data-unit="u2">Marcar unidad 2 como revisada</button>
+</section>
+
+<section class="unit" id="u3">
+ <div class="unit-head"><div class="num">03</div><div><div class="eyebrow">Dimensión lingüística y construcción de significado</div><h2>Lo que ocurre y lo que interpretamos que ocurre no son exactamente lo mismo.</h2>
+<div class="visual-band" aria-label="Recursos visuales de la unidad">
+  <figure class="visual-card">
+    <img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Two%20college%20students%20debating.jpg" alt="El lenguaje organiza interpretaciones, desacuerdos y posibilidades de acción.">
+    <figcaption>El lenguaje organiza interpretaciones, desacuerdos y posibilidades de acción.<br><a target="_blank" rel="noopener noreferrer" href="https://commons.wikimedia.org/wiki/File:Two_college_students_debating.jpg">Crédito y licencia: Ryanx7 / Wikimedia Commons ↗</a></figcaption>
+  </figure>
+  <article class="video-card">
+    <div class="video-label">▶ Video recomendado</div>
+    <a class="video-thumb" href="https://www.youtube.com/watch?v=EFNIgg4e780" target="_blank" rel="noopener noreferrer" aria-label="Ver en YouTube: Comunicación humana dentro del lenguaje — TEDx">
+      <img loading="lazy" src="https://i.ytimg.com/vi/EFNIgg4e780/hqdefault.jpg" alt="Miniatura del video: Comunicación humana dentro del lenguaje — TEDx">
+      <span class="play" aria-hidden="true">▶</span>
+    </a>
+    <h3>Comunicación humana dentro del lenguaje — TEDx</h3>
+    <p>Punto de partida para analizar conversación, significado e interpretación. Trátalo como perspectiva de la ponente, no como evidencia concluyente por sí sola.</p>
+    <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=EFNIgg4e780">Ver video en YouTube ↗</a>
+  </article>
+</div>
+<figure class="svg-scene"><svg viewBox="0 0 900 270" role="img" aria-labelledby="svg3t"><title id="svg3t">Del hecho a la interpretación, narrativa y acción</title>
+<rect width="900" height="270" fill="#f2fafb"/><g font-family="Arial,sans-serif" text-anchor="middle">
+<g transform="translate(70 88)"><rect width="150" height="94" rx="24" fill="#176b87"/><circle cx="75" cy="47" r="20" fill="none" stroke="white" stroke-width="6"/><path d="M75 19v12M75 63v12M47 47h12M91 47h12" stroke="white" stroke-width="5"/></g>
+<path d="M235 135h65" stroke="#ef765d" stroke-width="7"/><path d="M292 123l18 12-18 12" fill="#ef765d"/>
+<g transform="translate(320 88)"><rect width="150" height="94" rx="24" fill="#7056b8"/><path d="M43 55q32-45 64 0q-32 40-64 0z" fill="none" stroke="white" stroke-width="6"/><circle cx="75" cy="53" r="10" fill="white"/></g>
+<path d="M485 135h65" stroke="#ef765d" stroke-width="7"/><path d="M542 123l18 12-18 12" fill="#ef765d"/>
+<g transform="translate(570 88)"><rect width="150" height="94" rx="24" fill="#18a6a6"/><path d="M43 33h64M43 50h52M43 67h38" stroke="white" stroke-width="7" stroke-linecap="round"/></g>
+<path d="M735 135h55" stroke="#ef765d" stroke-width="7"/><path d="M782 123l18 12-18 12" fill="#ef765d"/><circle cx="835" cy="135" r="38" fill="#e9b44c"/><path d="M817 136l14 14 25-30" fill="none" stroke="white" stroke-width="8"/>
+</g></svg><figcaption>Hecho observable → interpretación → narrativa → acción. Separar estas capas ayuda a evitar que una lectura personal se presente como hecho.</figcaption></figure><p>El lenguaje permite describir, categorizar, explicar y compartir experiencias. También participa en narrativas sobre nosotros y otras personas, sin poseer por ello poderes mágicos.</p></div></div>
+ <div class="diagram"><div class="flow"><span class="node">Evento</span><span class="arrow">≠</span><span class="node">Interpretación</span><span class="arrow">≠</span><span class="node">Evaluación</span><span class="arrow">≠</span><span class="node">Respuesta</span></div></div>
+ <h3>3.1 Lenguaje y contexto</h3><p>“TENEMOS QUE HABLAR” puede adquirir significados diferentes según persona, relación, tono, contexto, acontecimientos previos y medio.</p><p><strong>Lenguaje + contexto + interpretación → significado.</strong></p>
+ <h3>3.2 Hecho e interpretación</h3><div class="grid3"><div class="card"><strong>Observación</strong><p>No respondió mi mensaje durante seis horas.</p></div><div class="card"><strong>Interpretación</strong><p>Está enojado conmigo.</p></div><div class="card"><strong>Alternativas</strong><p>Está trabajando. No vio el mensaje.</p></div></div><p>¿Qué evidencia permitiría distinguir estas explicaciones?</p>
+ <div class="lab"><div class="tag">Laboratorio de interpretación</div><p>Analiza “Mi jefe me ignoró” separando: observación, inferencia, evaluación, emoción, respuesta, evidencia, alternativas e información faltante.</p></div>
+ <h3>3.3 Marcos y categorías</h3><div class="route"><span>Problema</span><span>Reto</span><span>Riesgo</span><span>Oportunidad</span></div><p>Cambiar el marco puede hacer visibles aspectos diferentes de una situación, pero <strong>cambiar el nombre no necesariamente cambia el evento.</strong></p>
+ <h3>3.4 Narrativa e identidad</h3><p>La identidad narrativa permite estudiar cómo organizamos temporalmente experiencias y autodescripciones. Analiza narrativas como “Nunca termino nada”, “Siempre elijo mal” o “No soy líder” atendiendo evidencia a favor y en contra, excepciones, contexto, origen y consecuencias.</p>
+ <p><a target="_blank" rel="noopener noreferrer" href="https://revistas.ucm.es/index.php/ASEM/es/article/view/79179">Ibáñez Ruiz — La identidad narrativa</a> · <a target="_blank" rel="noopener noreferrer" href="https://revistaselectronicas.ujaen.es/index.php/ADE/article/view/5114">Sevilla Vallejo — pensamiento narrativo, conocimiento e identidad</a></p>
+ <div class="lab"><div class="tag">Laboratorio de narrativa</div><p>Elige una autodescripción recurrente y registra narrativa, evidencia a favor, evidencia en contra, excepciones, contexto, conductas concretas y reformulación. El objetivo no es sustituir una narrativa negativa por optimismo sin evidencia, sino producir descripciones específicas, contextuales y revisables.</p></div>
+ <h3>3.5 Conversación y acción</h3><div class="route"><span>Afirmaciones</span><span>Preguntas</span><span>Peticiones</span><span>Ofertas</span><span>Compromisos</span><span>Retroalimentación</span></div><p>Las conversaciones no sólo transmiten información: también coordinan acciones y compromisos entre personas.</p>
+ <h3>3.6 Reencuadre</h3><p>Reencuadrar consiste en explorar interpretaciones alternativas. No significa negar problemas, forzar optimismo, convertir pérdidas en “regalos” ni responsabilizar automáticamente a la persona.</p><div class="grid2"><div class="card"><strong>Irresponsable</strong><p>“Perder el trabajo fue el universo dándote una oportunidad.”</p></div><div class="card"><strong>Responsable</strong><p>“La pérdida del empleo es real. ¿Qué interpretaciones, necesidades y opciones podemos explorar a partir de esta situación?”</p></div></div>
+ <h3>3.7 Lenguaje, etiquetas y poder</h3><p>¿Quién puede nombrar? ¿Qué ocurre cuando una descripción se convierte en identidad? ¿Quién tiene autoridad para imponer una interpretación? Analiza etiquetas, estereotipos, autoridad, lenguaje profesional y categorización social.</p>
+ <div class="critical myth"><div class="tag">Ingeniería o ingenuidad 3</div><h3>“Tus palabras crean tu realidad.”</h3><button aria-expanded="false">Analizar afirmación</button><div hidden><p><strong>Parte defendible:</strong> el lenguaje participa en interpretación, categorización, comunicación y construcción narrativa.</p><p><strong>Problema:</strong> cambiar vocabulario no modifica automáticamente condiciones externas.</p><p><strong>Reformulación:</strong> el lenguaje participa en cómo interpretamos y comunicamos nuestra experiencia y puede abrir alternativas de respuesta, pero no determina por sí solo la realidad externa.</p></div></div>
+ <div class="evidence"><div class="tag">Evidencia unidad 3</div><h3>Laboratorio de interpretación</h3><p>Evento observable, interpretación, evaluación, emoción, evidencia, información faltante, alternativas, narrativa implicada, posible reencuadre y límites del reencuadre.</p></div>
+ <button class="review" data-unit="u3">Marcar unidad 3 como revisada</button>
+</section>
+
+<section class="unit" id="u4">
+ <div class="unit-head"><div class="num">04</div><div><div class="eyebrow">Dimensión emocional y corporal</div><h2>Regular no significa dejar de sentir.</h2>
+<div class="visual-band" aria-label="Recursos visuales de la unidad">
+  <figure class="visual-card">
+    <img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Emociones%20caras.jpg" alt="Las emociones pueden distinguirse con mayor precisión sin convertir el ejercicio en diagnóstico.">
+    <figcaption>Las emociones pueden distinguirse con mayor precisión sin convertir el ejercicio en diagnóstico.<br><a target="_blank" rel="noopener noreferrer" href="https://commons.wikimedia.org/wiki/File:Emociones_caras.jpg">Crédito y licencia: MARIA DEL CIELO BARRIOS / Wikimedia Commons ↗</a></figcaption>
+  </figure>
+  <article class="video-card">
+    <div class="video-label">▶ Video recomendado</div>
+    <a class="video-thumb" href="https://www.youtube.com/watch?v=ztUFn_0Dn9U" target="_blank" rel="noopener noreferrer" aria-label="Ver en YouTube: Regulación emocional — Facultad de Psicología, UNAM">
+      <img loading="lazy" src="https://i.ytimg.com/vi/ztUFn_0Dn9U/hqdefault.jpg" alt="Miniatura del video: Regulación emocional — Facultad de Psicología, UNAM">
+      <span class="play" aria-hidden="true">▶</span>
+    </a>
+    <h3>Regulación emocional — Facultad de Psicología, UNAM</h3>
+    <p>Recurso educativo para conectar emoción, interpretación y estrategias de regulación dentro del alcance académico de la unidad.</p>
+    <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=ztUFn_0Dn9U">Ver video en YouTube ↗</a>
+  </article>
+</div>
+<figure class="svg-scene"><svg viewBox="0 0 900 270" role="img" aria-labelledby="svg4t"><title id="svg4t">Proceso de regulación emocional entre cuerpo, emoción, interpretación y respuesta</title>
+<rect width="900" height="270" fill="#f8f7ff"/><path d="M145 135C260 30 350 240 450 135S650 30 755 135" fill="none" stroke="#18a6a6" stroke-width="9" stroke-linecap="round"/>
+<g fill="#fff" stroke-width="7"><circle cx="145" cy="135" r="48" stroke="#176b87"/><circle cx="350" cy="135" r="48" stroke="#ef765d"/><circle cx="550" cy="135" r="48" stroke="#7056b8"/><circle cx="755" cy="135" r="48" stroke="#e9b44c"/></g>
+<path d="M127 122q18-18 36 0M130 151q15 15 30 0" fill="none" stroke="#176b87" stroke-width="6" stroke-linecap="round"/>
+<path d="M350 101v68M326 135h48" stroke="#ef765d" stroke-width="7" stroke-linecap="round"/>
+<path d="M526 137q24-45 48 0q-24 36-48 0z" fill="none" stroke="#7056b8" stroke-width="6"/>
+<path d="M730 137l17 17 33-39" fill="none" stroke="#d49a27" stroke-width="8" stroke-linecap="round"/>
+</svg><figcaption>Cuerpo → emoción → interpretación → respuesta regulada. El objetivo académico es observar relaciones, no diagnosticar.</figcaption></figure><p>Las emociones participan en atención, motivación, relaciones y toma de decisiones. Estudiaremos cómo situación, atención, interpretación, activación corporal y respuesta pueden interactuar.</p></div></div>
+ <div class="diagram"><div class="flow"><span class="node">Situación</span><span class="arrow">→</span><span class="node">Atención</span><span class="arrow">→</span><span class="node">Interpretación</span><span class="arrow">→</span><span class="node">Activación</span><span class="arrow">→</span><span class="node">Respuesta</span><span class="arrow">→</span><span class="node">Regulación</span></div></div><p class="note">El proceso emocional no siempre ocurre como una secuencia lineal idéntica.</p>
+ <h3>4.1 Emoción, afecto y estado de ánimo</h3><p>Distingue estos conceptos sin convertir las diferencias en categorías rígidas: la literatura puede utilizar definiciones distintas según tradición teórica y método.</p>
+ <h3>4.2 Función de las emociones</h3><p>Las emociones pueden orientar atención, preparar acción, comunicar, señalar relevancia e influir en decisiones.</p><p class="bigline">Emoción desagradable ≠ emoción inútil.</p>
+ <h3>4.3 Reconocimiento emocional</h3><p>Pregunta: ¿qué siento?, ¿con qué intensidad?, ¿qué ocurrió?, ¿qué interpretación realizo?, ¿qué sensaciones corporales observo?, ¿qué impulso de acción aparece?</p>
+ <div class="lab"><div class="tag">Laboratorio de granularidad emocional</div><p>Transforma “me siento mal” en descripciones más específicas: frustración, decepción, ansiedad, irritación, sobrecarga, tristeza, vergüenza o incertidumbre. El ejercicio no diagnostica.</p></div>
+ <h3>4.4 Regulación emocional</h3><p>Compara reevaluación cognitiva y supresión expresiva como estrategias distintas. No presentes una como universalmente buena y otra como universalmente mala: el contexto importa.</p>
+ <p><a target="_blank" rel="noopener noreferrer" href="https://dspace.palermo.edu/ojs/index.php/psicodebate/article/view/3881">Pagano y Vizioli — adaptación del ERQ</a> · <a target="_blank" rel="noopener noreferrer" href="https://ve.scielo.org/scielo.php?lng=es&nrm=iso&pid=S1316-48212026000100087&script=sci_abstract">Estrés académico y regulación emocional en universitarios (2026)</a></p>
+ <div class="research"><div class="tag">Mirada de investigación</div><p>El estudio de estrés académico señalado en el programa es correlacional. Una asociación entre variables no demuestra automáticamente que una cause la otra.</p></div>
+ <div class="lab"><div class="tag">Laboratorio de regulación</div><p>Caso: recibes retroalimentación crítica inesperada sobre un proyecto. Explora cuatro familias de respuesta: modificar la situación, redirigir la atención, reevaluar la interpretación y regular la respuesta. Compara beneficios, costos y contexto.</p></div>
+ <h3>4.5 Cuerpo e interocepción</h3><p><strong>Interocepción:</strong> percepción de señales procedentes del interior del organismo. Puede incluir respiración, tensión muscular, percepción del ritmo cardiaco, temperatura, sensaciones gastrointestinales e inquietud corporal.</p>
+ <div class="limit"><div class="tag">Límite profesional</div><h3>El cuerpo informa; no adivina.</h3><p>Una aceleración cardiaca puede aparecer con miedo, entusiasmo, ejercicio, anticipación, estimulantes o enfermedad. Una señal corporal aislada no constituye un diagnóstico psicológico.</p></div>
+ <h3>4.6 Alba Emoting</h3><p>Se estudia por formar parte del contenido institucional, como un modelo/práctica específica de trabajo corporal y emocional. Sus postulados propios deben distinguirse del conocimiento psicológico general y no presentarse automáticamente como hechos neurocientíficos universales.</p>
+ <div class="research"><div class="tag">Mirada de investigación</div><p>Pregunta: ¿quién propone el modelo?, ¿qué afirma exactamente?, ¿qué evidencia presenta?, ¿qué resultados han sido replicados?, ¿qué afirmaciones pertenecen al modelo y cuáles cuentan con respaldo independiente?</p></div>
+ <h3>4.7 Estrés y activación</h3><div class="diagram"><div class="flow"><span class="node">Demanda</span><span class="arrow">→</span><span class="node">Evaluación</span><span class="arrow">→</span><span class="node">Activación</span><span class="arrow">→</span><span class="node">Afrontamiento</span><span class="arrow">→</span><span class="node">Recuperación</span></div></div><p>La experiencia de estrés depende de múltiples factores y no puede reducirse únicamente a “actitud”.</p>
+ <h3>4.8 Integración emoción–cognición–conducta</h3><p>Caso: tu supervisor escribe “Ven a mi oficina cuando puedas.” Construye tres rutas interpretativas diferentes y, en cada una, conecta evento → interpretación → emoción → activación → conducta. ¿Qué información adicional necesitarías antes de concluir qué significa?</p>
+ <div class="critical myth"><div class="tag">Ingeniería o ingenuidad 4</div><h3>“Las emociones negativas deben eliminarse.”</h3><button aria-expanded="false">Analizar afirmación</button><div hidden><p><strong>Parte defendible:</strong> algunas respuestas pueden resultar intensas, persistentes o poco útiles en ciertos contextos y existen estrategias para regularlas.</p><p><strong>Problema:</strong> clasificar emociones enteras como negativas e inútiles ignora posibles funciones.</p><p><strong>Reformulación:</strong> las emociones desagradables pueden cumplir funciones informativas, motivacionales y sociales. La regulación busca gestionar respuestas de acuerdo con el contexto, no eliminar categorías completas de experiencia.</p></div></div>
+ <div class="evidence"><div class="tag">Evidencia unidad 4</div><h3>Caso de regulación</h3><p>Situación, atención, interpretación, emoción, activación corporal, conducta, estrategia de regulación, alternativa, posible costo y contexto.</p></div>
+ <button class="review" data-unit="u4">Marcar unidad 4 como revisada</button>
+</section>
+
+<section class="unit" id="u5">
+ <div class="unit-head"><div class="num">05</div><div><div class="eyebrow">Liderazgo personal e interpersonal</div><h2>Influir implica responsabilidad.</h2>
+<div class="visual-band" aria-label="Recursos visuales de la unidad">
+  <figure class="visual-card">
+    <img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Team%20Meeting.jpg" alt="Liderar implica coordinar, escuchar, distribuir influencia y trabajar con desacuerdos.">
+    <figcaption>Liderar implica coordinar, escuchar, distribuir influencia y trabajar con desacuerdos.<br><a target="_blank" rel="noopener noreferrer" href="https://commons.wikimedia.org/wiki/File:Team_Meeting.jpg">Crédito y licencia: woodleywonderworks / Wikimedia Commons ↗</a></figcaption>
+  </figure>
+  <article class="video-card">
+    <div class="video-label">▶ Video recomendado</div>
+    <a class="video-thumb" href="https://www.youtube.com/watch?v=Pkb7m7bqb2o" target="_blank" rel="noopener noreferrer" aria-label="Ver en YouTube: Seguridad psicológica en equipos">
+      <img loading="lazy" src="https://i.ytimg.com/vi/Pkb7m7bqb2o/hqdefault.jpg" alt="Miniatura del video: Seguridad psicológica en equipos">
+      <span class="play" aria-hidden="true">▶</span>
+    </a>
+    <h3>Seguridad psicológica en equipos</h3>
+    <p>Complemento para discutir participación, desacuerdo, aprendizaje y condiciones que facilitan que las personas hablen dentro de un equipo.</p>
+    <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=Pkb7m7bqb2o">Ver video en YouTube ↗</a>
+  </article>
+</div>
+<figure class="svg-scene"><svg viewBox="0 0 900 270" role="img" aria-labelledby="svg5t"><title id="svg5t">Liderazgo como red de influencia, escucha y coordinación</title>
+<rect width="900" height="270" fill="#f1f8fb"/><g stroke="#b8cada" stroke-width="5"><path d="M450 135L210 72M450 135L210 205M450 135L690 72M450 135L690 205M210 72L690 205M690 72L210 205"/></g>
+<circle cx="450" cy="135" r="65" fill="#176b87"/><g fill="#fff"><circle cx="450" cy="115" r="18"/><path d="M416 166q34-58 68 0"/></g>
+<g><circle cx="210" cy="72" r="42" fill="#18a6a6"/><circle cx="210" cy="205" r="42" fill="#7056b8"/><circle cx="690" cy="72" r="42" fill="#ef765d"/><circle cx="690" cy="205" r="42" fill="#e9b44c"/></g>
+<g fill="white"><circle cx="210" cy="64" r="10"/><path d="M190 91q20-32 40 0"/><circle cx="210" cy="197" r="10"/><path d="M190 224q20-32 40 0"/><circle cx="690" cy="64" r="10"/><path d="M670 91q20-32 40 0"/><circle cx="690" cy="197" r="10"/><path d="M670 224q20-32 40 0"/></g>
+</svg><figcaption>El liderazgo se analiza como una red de influencia, coordinación, poder, escucha y responsabilidad compartida.</figcaption></figure><p class="bigline">¿Se puede liderar sin tener un cargo?</p></div></div>
+ <div class="grid2"><details><summary>Autoridad</summary><p>Reconocimiento o facultad para orientar decisiones o acciones, que puede derivar de un rol, conocimiento, legitimidad o relación.</p></details><details><summary>Poder</summary><p>Capacidad de afectar opciones, recursos, consecuencias o conductas de otras personas dentro de una relación o sistema.</p></details><details><summary>Influencia</summary><p>Proceso por el cual una persona o grupo afecta percepciones, decisiones o acciones de otros.</p></details><details><summary>Liderazgo</summary><p>Fenómeno relacional y contextual vinculado con influencia, coordinación y objetivos compartidos o disputados.</p></details></div>
+ <h3>5.1 Liderazgo</h3><p>Estudia el liderazgo como fenómeno relacional y contextual, no como atributo heroico de individuos extraordinarios.</p>
+ <h3>5.2 Perspectivas</h3><div class="route"><span>Rasgos</span><span>Conductual</span><span>Situacionales</span><span>Transformacional</span><span>Transaccional</span></div><p>Pregunta recurrente: <strong>¿Qué explica este modelo y qué deja fuera?</strong> Ningún modelo se presenta como universalmente superior.</p>
+ <div class="lab"><div class="tag">Laboratorio de modelos de liderazgo</div><p>Compara: emergencia con coordinación inmediata; equipo creativo; persona nueva aprendiendo; equipo experto y autónomo; incumplimiento ético serio. Pregunta primero “¿qué necesita esta situación?” y después identifica conductas útiles y riesgos de aplicar el mismo estilo a todos los casos.</p></div>
+ <h3>5.3 Autoliderazgo</h3><div class="diagram"><div class="flow"><span class="node">Meta</span><span class="arrow">→</span><span class="node">Decisión</span><span class="arrow">→</span><span class="node">Conducta</span><span class="arrow">→</span><span class="node">Monitoreo</span><span class="arrow">→</span><span class="node">Ajuste</span></div></div><p>Autoliderazgo no significa autosuficiencia absoluta.</p>
+ <h3>5.4 Comunicación y retroalimentación</h3><div class="grid2"><div class="card"><strong>Juicio sobre la persona</strong><p>“Eres irresponsable.”</p></div><div class="card"><strong>Descripción conductual</strong><p>“El reporte se entregó dos días después del plazo y eso retrasó la revisión del equipo.”</p><p>¿Qué ocurrió? ¿Qué necesitamos acordar para la siguiente entrega?</p></div></div>
+ <div class="diagram"><div class="flow"><span class="node">Observación</span><span class="arrow">→</span><span class="node">Impacto</span><span class="arrow">→</span><span class="node">Pregunta</span><span class="arrow">→</span><span class="node">Acuerdo</span></div></div>
+ <div class="lab"><div class="tag">Laboratorio de retroalimentación</div><p>Transforma “Eres poco comprometido”, “No sabes trabajar en equipo”, “Siempre estás a la defensiva” y “No tienes iniciativa” en retroalimentación basada en conducta observable, contexto, impacto, pregunta y acuerdo.</p></div>
+ <h3>5.5 Equipos y seguridad psicológica</h3><p>Condición relacionada con la posibilidad de asumir riesgos interpersonales dentro del equipo: preguntar, reconocer errores, expresar desacuerdos o solicitar ayuda.</p><p class="bigline">Seguridad psicológica ≠ ausencia de exigencia.</p><p>No significa ausencia de críticas, responsabilidad o desacuerdos, ni que “todo está bien”.</p>
+ <p><a target="_blank" rel="noopener noreferrer" href="https://revistas.unilibre.edu.co/index.php/criteriolibre/article/view/232">Borda Arias — seguridad psicológica y eficacia de equipos</a> · <a target="_blank" rel="noopener noreferrer" href="https://escalas.unegocios.cl/escala-fulldetalle.php?cat=448">Universidad de Chile — escala de seguridad psicológica</a></p>
+ <h3>5.6 Conflicto y negociación</h3><div class="grid2"><div class="card"><strong>Posición</strong><p>Lo que digo que quiero.</p></div><div class="card"><strong>Interés</strong><p>Por qué lo necesito / qué necesidad intento satisfacer.</p></div></div><p>Las posiciones pueden parecer incompatibles; explorar intereses puede revelar alternativas.</p>
+ <p><a target="_blank" rel="noopener noreferrer" href="https://secretaria-virtual.uam.es/cowep/control/consultaEPDetalle?codEp=1854&edicion=1&entradaPublica=true&idioma=es.ES">Universidad Autónoma de Madrid — conflicto y negociación integrativa</a> · <a target="_blank" rel="noopener noreferrer" href="https://api.um.es/aulavirtual/guiasdocentes-api/public/v1/guias/1041/G/2025/E/html">Universidad de Murcia — conflicto y negociación</a></p>
+ <div class="lab"><div class="tag">Laboratorio de conflicto</div><p>Dos equipos reciben posición pública, información confidencial, necesidades, restricciones y prioridades. El objetivo no es “ganar”, sino identificar intereses → generar opciones → evaluar costos → negociar → construir un acuerdo defendible.</p><p>¿En qué momento cambió la conversación al pasar de posiciones a intereses?</p></div>
+ <h3>5.7 Poder y ética</h3><p>Compara la misma pregunta —“¿Puedes quedarte dos horas más?”— formulada por un amigo y por un gerente a una persona subordinada. Las palabras son iguales; la relación no. Analiza libertad real para negarse, consecuencias, poder y responsabilidad adicional de quien tiene mayor poder.</p>
+ <div class="lab"><div class="tag">Laboratorio de poder</div><p>Analiza relaciones gerente/colaborador, docente/estudiante, mentor/persona acompañada, coach/cliente, compañeros y cliente/proveedor. Identifica poder formal, informal, control de recursos e información, dependencia, capacidad real de negarse y responsabilidad.</p></div>
+ <h3>5.8 Desarrollo de liderazgo</h3><div class="card"><strong>Plan de desarrollo basado en evidencia</strong><ol><li>Competencia.</li><li>Evidencia inicial.</li><li>Contexto.</li><li>Objetivo observable.</li><li>Acciones.</li><li>Indicadores.</li><li>Retroalimentación.</li><li>Revisión.</li><li>Ajuste.</li></ol></div>
+ <div class="critical myth"><div class="tag">Ingeniería o ingenuidad 5</div><h3>“Un gran líder inspira a todos.”</h3><button aria-expanded="false">Analizar afirmación</button><div hidden><p><strong>Parte defendible:</strong> conductas de liderazgo pueden influir en motivación, coordinación, confianza y desempeño.</p><p><strong>Problema:</strong> la respuesta depende de personas, equipo, contexto, tarea, relaciones y estructura.</p><p><strong>Reformulación:</strong> la influencia del liderazgo depende de conductas, relaciones, contexto, características del equipo y condiciones de trabajo; ninguna conducta garantiza la misma respuesta en todas las personas.</p></div></div>
+ <div class="evidence"><div class="tag">Evidencia unidad 5</div><h3>Laboratorio de liderazgo</h3><p>Integra análisis de influencia, comunicación, equipo, conflicto, poder, conducta observable y responsabilidad.</p></div>
+ <button class="review" data-unit="u5">Marcar unidad 5 como revisada</button>
+</section>
+
+<section class="unit" id="laboratorios"><div class="eyebrow">Práctica</div><h2>Laboratorio Humano</h2><p class="lead">Comprender conceptos no es suficiente. En estos laboratorios los conceptos se convierten en observación, conversación, decisión y práctica.</p>
+ <div class="filters" id="labFilters"><button class="active" data-filter="all">Todos</button><button data-filter="conv">Conversación</button><button data-filter="decision">Decisión</button><button data-filter="interp">Interpretación</button><button data-filter="reg">Regulación</button><button data-filter="lead">Liderazgo</button><button data-filter="crit">Pensamiento crítico</button></div>
+ <div class="grid3" id="labs">
+  <div class="card labitem" data-cat="conv"><h3>🗣️ Laboratorio de conversación</h3><p>Escucha, preguntas, coaching y retroalimentación.</p></div>
+  <div class="card labitem" data-cat="decision"><h3>🧭 Laboratorio de decisiones</h3><p>Metas, alternativas, heurísticos y decisiones.</p></div>
+  <div class="card labitem" data-cat="interp"><h3>🔍 Laboratorio de interpretación</h3><p>Hechos, inferencias, narrativas y reencuadres.</p></div>
+  <div class="card labitem" data-cat="reg"><h3>🌡️ Laboratorio de regulación</h3><p>Emoción, activación, interpretación y regulación.</p></div>
+  <div class="card labitem" data-cat="lead"><h3>👥 Laboratorio de liderazgo</h3><p>Influencia, poder, conflicto y coordinación.</p></div>
+  <div class="card labitem" data-cat="crit"><h3>🔎 Ingeniería o ingenuidad</h3><p>Evaluación crítica de afirmaciones sobre desarrollo humano.</p></div>
+ </div>
+</section>
+
+<section class="unit" id="proyecto"><div class="eyebrow">Proyecto final</div><h2>Laboratorio de Desarrollo Humano</h2><p>Integra las cinco dimensiones del curso en una situación humana compleja. El objetivo no es diagnosticar a una persona, sino observar, distinguir, argumentar y proponer una intervención responsable dentro del alcance de la asignatura.</p>
+ <div class="card"><h3>Caso integrador</h3><p>Construye o recibe un caso que incluya un objetivo, una dificultad interpersonal, una interpretación, una emoción, una decisión, contexto, liderazgo y una relación de poder.</p></div>
+ <div class="grid2">
+  <div class="card"><strong>1. Análisis situacional no clínico</strong><p>¿Qué puede observarse?</p></div><div class="card"><strong>2. Hechos e interpretaciones</strong><p>¿Qué conocemos y qué inferimos?</p></div>
+  <div class="card"><strong>3. Valores y competencias</strong><p>¿Qué es relevante?</p></div><div class="card"><strong>4. Estrategia de coaching</strong><p>¿Qué preguntas facilitarían reflexión?</p></div>
+  <div class="card"><strong>5. Dimensión emocional</strong><p>¿Qué procesos de regulación podrían ser relevantes? No diagnosticar.</p></div><div class="card"><strong>6. Dimensión lingüística</strong><p>¿Qué etiquetas, interpretaciones o narrativas aparecen?</p></div>
+  <div class="card"><strong>7. Liderazgo y poder</strong><p>¿Qué relaciones de influencia o poder existen?</p></div><div class="card"><strong>8. Plan de acción</strong><p>¿Qué acciones concretas podrían desarrollarse?</p></div>
+  <div class="card"><strong>9. Límites éticos</strong><p>¿Qué no corresponde resolver mediante coaching? ¿Cuándo se requiere otra intervención?</p></div><div class="card"><strong>10. Reflexión</strong><p>¿Qué cambió en tu interpretación durante el análisis?</p></div>
+ </div>
+ <h3>Rúbrica interna del proyecto final</h3>
+ <table><thead><tr><th>Criterio</th><th>Peso</th></tr></thead><tbody>
+ <tr><td>Análisis de hechos e interpretaciones</td><td>15%</td></tr><tr><td>Uso de conceptos del curso</td><td>15%</td></tr><tr><td>Valores, competencias y agencia</td><td>10%</td></tr><tr><td>Herramientas de coaching</td><td>10%</td></tr><tr><td>Integración emoción/cognición/cuerpo</td><td>10%</td></tr><tr><td>Lenguaje y narrativa</td><td>10%</td></tr><tr><td>Liderazgo, poder y contexto</td><td>10%</td></tr><tr><td>Plan de acción</td><td>10%</td></tr><tr><td>Ética y límites profesionales</td><td>5%</td></tr><tr><td>Argumentación y reflexión</td><td>5%</td></tr><tr><td>TOTAL</td><td>100%</td></tr>
+ </tbody></table><p class="note">Descriptores sugeridos: Excelente · Competente · En desarrollo · Inicial. Esta rúbrica es interna del proyecto final y no sustituye la ponderación institucional SIATI.</p>
+</section>
+
+<section class="unit" id="evaluacion"><div class="eyebrow">Evaluación y trazabilidad</div><h2>¿Cómo se conecta todo?</h2>
+ <div class="diagram"><div class="flow"><span class="node">Objetivo</span><span class="arrow">→</span><span class="node">Contenido</span><span class="arrow">→</span><span class="node">Actividad</span><span class="arrow">→</span><span class="node">Evidencia</span><span class="arrow">→</span><span class="node">Criterio</span><span class="arrow">→</span><span class="node">Evaluación</span></div></div>
+ <table><thead><tr><th>Tramo</th><th>Contenido</th><th>Actividad</th><th>Evidencia</th></tr></thead><tbody>
+ <tr><td>Unidad 1</td><td>Coaching, escucha, GROW, ética</td><td>Laboratorio de conversación / GROW</td><td>Bitácora de coaching</td></tr>
+ <tr><td>Unidad 2</td><td>Valores, competencias, motivación, decisiones</td><td>Laboratorio de decisiones</td><td>Mapa de autorregulación</td></tr>
+ <tr><td>Unidad 3</td><td>Lenguaje, interpretación, narrativa</td><td>Laboratorio de interpretación</td><td>Laboratorio de interpretación</td></tr>
+ <tr><td>Unidad 4</td><td>Emoción, cuerpo, regulación</td><td>Laboratorio de regulación</td><td>Caso de regulación</td></tr>
+ <tr><td>Unidad 5</td><td>Liderazgo, retroalimentación, equipos, conflicto, poder</td><td>Laboratorio de liderazgo</td><td>Laboratorio de liderazgo</td></tr>
+ <tr><td>Integración</td><td>Curso completo</td><td>Caso integrador</td><td>Laboratorio de Desarrollo Humano</td></tr>
+ </tbody></table><p class="note">No se asignan porcentajes institucionales porque no fueron proporcionados. La estructura queda preparada para incorporarlos después.</p>
+</section>
+
+<section class="unit" id="recursos"><div class="eyebrow">Biblioteca</div><h2>Recursos académicos</h2>
+ <div class="critical"><div class="tag">Principio epistémico del curso</div><h3>Antes de aceptar una afirmación, pregunta:</h3><ol><li>¿Qué afirma exactamente?</li><li>¿Quién lo afirma?</li><li>¿Qué evidencia presenta?</li><li>¿La evidencia demuestra causalidad o asociación?</li><li>¿En qué población se estudió?</li><li>¿Qué otras explicaciones existen?</li><li>¿Cuáles son sus límites?</li><li>¿Cómo podemos expresarlo sin exagerarlo?</li></ol></div>
+ <div class="limit"><div class="tag">Salud mental y alcance académico</div><p>El curso estudia emociones, estrés, narrativa, regulación y desarrollo humano, pero sus actividades no son psicoterapia. No se solicita revelar trauma, diagnósticos, historial clínico u otra información sensible. Las actividades pueden realizarse con casos ficticios, académicos, profesionales o experiencias personales no sensibles elegidas voluntariamente.</p></div>
+ <div class="filters" id="resFilters"><button class="active" data-filter="all">Todos</button><button data-filter="coaching">Coaching</button><button data-filter="motivacion">Motivación</button><button data-filter="decisiones">Decisiones</button><button data-filter="lenguaje">Lenguaje</button><button data-filter="emociones">Emociones</button><button data-filter="equipos">Equipos</button><button data-filter="conflicto">Conflicto</button><button data-filter="etica">Ética</button></div>
+ <div id="resourceList"></div>
+ <h3>Biblioteca de videos</h3><p class="media-note">Selección externa para ampliar y contrastar los temas del curso. Las miniaturas abren el video directamente en YouTube para evitar bloqueos de reproducción dentro del sitio.</p><div class="video-library"><article class="video-card">
+<a class="video-thumb" href="https://www.youtube.com/watch?v=VKT4qEFSt4o" target="_blank" rel="noopener noreferrer" aria-label="Ver en YouTube: Modelo GROW en español">
+      <img loading="lazy" src="https://i.ytimg.com/vi/VKT4qEFSt4o/hqdefault.jpg" alt="Miniatura del video: Modelo GROW en español">
+      <span class="play" aria-hidden="true">▶</span>
+    </a>
+<h3>Modelo GROW en español</h3><p>Recurso introductorio para observar la secuencia objetivo–realidad–opciones–acción. Contrasta el video con los criterios éticos y de autonomía de la unidad.</p><a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=VKT4qEFSt4o">Ver video en YouTube ↗</a></article><article class="video-card">
+<a class="video-thumb" href="https://www.youtube.com/watch?v=NLqeWdRJ6Eg" target="_blank" rel="noopener noreferrer" aria-label="Ver en YouTube: Sesgos cognitivos al descubierto — Universidad Nacional de Colombia">
+      <img loading="lazy" src="https://i.ytimg.com/vi/NLqeWdRJ6Eg/hqdefault.jpg" alt="Miniatura del video: Sesgos cognitivos al descubierto — Universidad Nacional de Colombia">
+      <span class="play" aria-hidden="true">▶</span>
+    </a>
+<h3>Sesgos cognitivos al descubierto — Universidad Nacional de Colombia</h3><p>Úsalo para identificar cómo los atajos cognitivos pueden influir en juicios y decisiones, y qué evidencia adicional conviene buscar.</p><a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=NLqeWdRJ6Eg">Ver video en YouTube ↗</a></article><article class="video-card">
+<a class="video-thumb" href="https://www.youtube.com/watch?v=EFNIgg4e780" target="_blank" rel="noopener noreferrer" aria-label="Ver en YouTube: Comunicación humana dentro del lenguaje — TEDx">
+      <img loading="lazy" src="https://i.ytimg.com/vi/EFNIgg4e780/hqdefault.jpg" alt="Miniatura del video: Comunicación humana dentro del lenguaje — TEDx">
+      <span class="play" aria-hidden="true">▶</span>
+    </a>
+<h3>Comunicación humana dentro del lenguaje — TEDx</h3><p>Punto de partida para analizar conversación, significado e interpretación. Trátalo como perspectiva de la ponente, no como evidencia concluyente por sí sola.</p><a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=EFNIgg4e780">Ver video en YouTube ↗</a></article><article class="video-card">
+<a class="video-thumb" href="https://www.youtube.com/watch?v=ztUFn_0Dn9U" target="_blank" rel="noopener noreferrer" aria-label="Ver en YouTube: Regulación emocional — Facultad de Psicología, UNAM">
+      <img loading="lazy" src="https://i.ytimg.com/vi/ztUFn_0Dn9U/hqdefault.jpg" alt="Miniatura del video: Regulación emocional — Facultad de Psicología, UNAM">
+      <span class="play" aria-hidden="true">▶</span>
+    </a>
+<h3>Regulación emocional — Facultad de Psicología, UNAM</h3><p>Recurso educativo para conectar emoción, interpretación y estrategias de regulación dentro del alcance académico de la unidad.</p><a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=ztUFn_0Dn9U">Ver video en YouTube ↗</a></article><article class="video-card">
+<a class="video-thumb" href="https://www.youtube.com/watch?v=Pkb7m7bqb2o" target="_blank" rel="noopener noreferrer" aria-label="Ver en YouTube: Seguridad psicológica en equipos">
+      <img loading="lazy" src="https://i.ytimg.com/vi/Pkb7m7bqb2o/hqdefault.jpg" alt="Miniatura del video: Seguridad psicológica en equipos">
+      <span class="play" aria-hidden="true">▶</span>
+    </a>
+<h3>Seguridad psicológica en equipos</h3><p>Complemento para discutir participación, desacuerdo, aprendizaje y condiciones que facilitan que las personas hablen dentro de un equipo.</p><a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=Pkb7m7bqb2o">Ver video en YouTube ↗</a></article></div>
+<p class="media-note">Imágenes: archivos de Wikimedia Commons con página de crédito/licencia enlazada. Videos: enlaces externos a YouTube; se abren en una pestaña nueva para evitar restricciones de reproducción incrustada.</p>
+</section>
+
+<section class="unit" id="glosario"><div class="eyebrow">Consulta rápida</div><h2>Glosario interactivo</h2><label for="glossSearch">Buscar término</label><input id="glossSearch" type="search" placeholder="Ej. agencia, heurístico, GROW…"><div class="glossary" id="glossary"></div></section>
+
+<section class="final" id="final"><div class="eyebrow">Cierre</div><h2>Del concepto a la acción</h2>
+ <p class="lead">Durante este curso observamos que el desarrollo humano no puede reducirse a una frase motivacional, una técnica o una explicación única.</p>
+ <p>Las personas interpretan. Sienten. Deciden. Conversan. Actúan. Se relacionan con contextos que facilitan algunas posibilidades y limitan otras.</p>
+ <p>Comprender estos procesos no nos permite controlar a las personas. Nos permite formular mejores preguntas, tomar decisiones más conscientes y actuar con mayor responsabilidad.</p>
+ <div class="final-words"><span>Observar</span><span>Interpretar</span><span>Regular</span><span>Conversar</span><span>Actuar</span><span>Liderar</span></div>
+ <h3>¿Qué cambió en tu forma de observar a las personas?</h3><label for="finalReflection">Reflexión final</label><textarea id="finalReflection" placeholder="Escribe aquí. Tu respuesta se guarda solamente en este navegador."></textarea><p id="savedMsg" class="note" aria-live="polite"></p>
+</section>
+</main>
+<script>
+const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const hamb=$("#hamb"), menu=$("#menu");hamb.addEventListener("click",()=>{const o=menu.classList.toggle("open");hamb.setAttribute("aria-expanded",o)});
+$$(".menu a").forEach(a=>a.addEventListener("click",()=>{menu.classList.remove("open");hamb.setAttribute("aria-expanded","false")}));
+
+// Critical-thinking cards
+$$(".myth button").forEach(b=>b.addEventListener("click",()=>{const p=b.nextElementSibling,open=p.hidden;p.hidden=!open;b.setAttribute("aria-expanded",open);b.textContent=open?"Cerrar análisis":"Analizar afirmación"}));
+
+// Course progress
+const reviewed=JSON.parse(localStorage.getItem("ih-reviewed")||"{}");
+function drawProgress(){const n=Object.values(reviewed).filter(Boolean).length;$("#progressBar").style.width=(n/5*100)+"%";$$(".review").forEach(b=>{if(reviewed[b.dataset.unit]){b.classList.add("reviewed");b.textContent="✓ Unidad revisada"}else{b.classList.remove("reviewed");b.textContent="Marcar "+b.dataset.unit.replace("u","unidad ")+" como revisada"}})}
+$$(".review").forEach(b=>b.addEventListener("click",()=>{reviewed[b.dataset.unit]=!reviewed[b.dataset.unit];localStorage.setItem("ih-reviewed",JSON.stringify(reviewed));drawProgress()}));drawProgress();
+
+// Coaching-or-not scenario
+const cases=[
+ {t:"CASO A · Una persona acaba de incorporarse a una empresa y no sabe utilizar el sistema financiero interno.",f:"La capacitación parece especialmente pertinente porque existe una habilidad o procedimiento que debe enseñarse. Puede combinarse con otras intervenciones según el contexto."},
+ {t:"CASO B · Una gerente quiere mejorar la forma en que delega responsabilidades.",f:"El coaching puede ser pertinente si la meta es explorar conductas, decisiones y práctica. Mentoring o capacitación también podrían aportar según la necesidad."},
+ {t:"CASO C · Una persona reporta ataques de pánico recurrentes que interfieren gravemente con su funcionamiento cotidiano.",f:"La prioridad es reconocer el límite profesional y favorecer atención clínica adecuada. Un coach no debe sustituir evaluación o tratamiento clínico."},
+ {t:"CASO D · Un estudiante quiere explorar dos posibles trayectorias profesionales.",f:"El coaching puede facilitar exploración; mentoring u orientación especializada también podrían ser útiles. La elección depende de lo que la persona necesita."}
+], opts=["Coaching","Mentoría","Consultoría","Capacitación","Atención clínica","Combinación"];let ci=0;
+function renderCase(){caseText.textContent=cases[ci].t;caseChoices.innerHTML=opts.map(o=>`<button type="button">${o}</button>`).join("");caseFeedback.style.display="none";caseWhy.value="";$$("#caseChoices button").forEach(b=>b.onclick=()=>{caseFeedback.textContent=cases[ci].f;caseFeedback.style.display="block"})}
+nextCase.onclick=()=>{ci=(ci+1)%cases.length;renderCase()};renderCase();
+
+// Filters
+function wireFilters(boxSel,itemSel){$$(boxSel+" button").forEach(b=>b.onclick=()=>{$$(boxSel+" button").forEach(x=>x.classList.remove("active"));b.classList.add("active");const f=b.dataset.filter;$$(itemSel).forEach(i=>i.hidden=!(f==="all"||i.dataset.cat===f))})}
+wireFilters("#labFilters",".labitem");
+
+// Resources
+const resources=[
+["coaching","International Coaching Federation España — definición de coaching","ICF España","Recurso profesional","Unidad 1","Introductorio","Español","https://www.coachingfederation.es/definicion-coaching","Definición profesional y características generales del proceso."],
+["coaching","UNED — Metodología de coaching práctico, método CRA y GROW","UNED","Recurso universitario","Unidad 1","Introductorio","Español","https://extension.uned.es/actividad/15231","Estructura GROW y práctica de preguntas."],
+["etica","International Coaching Federation — Código Ético vigente","ICF","Código profesional","Unidad 1","Consulta","Español / multilingüe","https://coachingfederation.org/credentialing/coaching-ethics/icf-code-of-ethics/","Ética, responsabilidades, confidencialidad y conflictos de interés."],
+["etica","International Coaching Federation — Recursos en español","ICF","Biblioteca","Unidad 1","Consulta","Español","https://coachingfederation.org/language/spanish/","Material profesional disponible en español."],
+["motivacion","Ryan y Deci — Teoría de la Autodeterminación","Ryan, R. M. y Deci, E. L.","Artículo","Unidad 2","Esencial","Español","https://selfdeterminationtheory.org/SDT/documents/2000_RyanDeci_SpanishAmPsych.pdf","Autonomía, competencia, relación y formas de motivación."],
+["motivacion","Implicaciones de la teoría motivacional de la Autodeterminación en el ámbito laboral","SciELO México","Artículo","Unidad 2","Complementario","Español","https://www.scielo.org.mx/scielo.php?pid=S2007-07052013000100010&script=sci_arttext","Aplicación de la teoría al contexto laboral."],
+["decisiones","Heurísticos y decisión","Nieto Carracedo, A. M. · Universidad de Salamanca","Trabajo académico","Unidad 2","Esencial","Español","https://gredos.usal.es/handle/10366/159151?locale-attribute=es&show=full","Heurísticos, decisiones y errores de razonamiento."],
+["decisiones","Los sesgos cognitivos en la toma de decisiones","Cortada de Kohan y Macbeth · UCA","Artículo","Unidad 2","Complementario","Español","https://repositorio.uca.edu.ar/handle/123456789/6131/","Introducción a sesgos y tradición de heurísticos."],
+["decisiones","Sesgos y heurísticas en estudiantes universitarios","SciELO Chile","Artículo empírico","Unidad 2","Complementario","Español","https://www.scielo.cl/scielo.php?pid=S0718-50062024000300035&script=sci_arttext","Caso empírico contemporáneo con población universitaria."],
+["lenguaje","La identidad narrativa: un puente entre la hermenéutica y las ciencias sociales","Ibáñez Ruiz, R. · UCM","Artículo","Unidad 3","Esencial","Español","https://revistas.ucm.es/index.php/ASEM/es/article/view/79179","Identidad narrativa y construcción temporal del sentido."],
+["lenguaje","El pensamiento narrativo aplicado al conocimiento y a la identidad","Sevilla Vallejo, S. · Universidad de Jaén","Artículo","Unidad 3","Complementario","Español","https://revistaselectronicas.ujaen.es/index.php/ADE/article/view/5114","Narración, educación e identidad."],
+["lenguaje","Identidad del sujeto educativo en la narrativa de la responsabilidad social universitaria","Castillejos Solís, M. E. · UAQ","Artículo","Unidad 3","Complementario","Español","https://www.scielo.org.mx/scielo.php?pid=S2007-74672020000200124&script=sci_arttext","Identidad narrativa, universidad y responsabilidad social."],
+["emociones","Adaptación del Cuestionario de Regulación Emocional (ERQ)","Pagano y Vizioli","Artículo","Unidad 4","Esencial","Español","https://dspace.palermo.edu/ojs/index.php/psicodebate/article/view/3881","Reevaluación cognitiva y supresión expresiva."],
+["emociones","Estrés académico y regulación emocional en estudiantes universitarios","Sierra Delgado et al. (2026)","Artículo correlacional","Unidad 4","Actual","Español","https://ve.scielo.org/scielo.php?lng=es&nrm=iso&pid=S1316-48212026000100087&script=sci_abstract","Estrés académico, reevaluación y supresión. Interpretar como asociación, no causalidad."],
+["equipos","Efectos del conocimiento compartido y la seguridad psicológica","Borda Arias, M. I.","Artículo","Unidad 5","Esencial","Español","https://revistas.unilibre.edu.co/index.php/criteriolibre/article/view/232","Seguridad psicológica, conocimiento compartido y equipos."],
+["equipos","Repositorio de Escalas — Seguridad Psicológica","Universidad de Chile","Repositorio","Unidad 5","Consulta","Español","https://escalas.unegocios.cl/escala-fulldetalle.php?cat=448","Observar cómo se operacionaliza un constructo mediante indicadores."],
+["conflicto","Formación en conflicto y negociación integrativa","Universidad Autónoma de Madrid","Recurso universitario","Unidad 5","Complementario","Español","https://secretaria-virtual.uam.es/cowep/control/consultaEPDetalle?codEp=1854&edicion=1&entradaPublica=true&idioma=es.ES","Posiciones, intereses y negociación integrativa."],
+["conflicto","Aplicaciones de Psicología Social: conflicto y negociación","Universidad de Murcia","Guía académica","Unidad 5","Complementario","Español","https://api.um.es/aulavirtual/guiasdocentes-api/public/v1/guias/1041/G/2025/E/html","Conflicto, afrontamiento, posiciones e intereses."],
+["conflicto","Poder y conflicto: aristas del cambio organizacional","Universidad Autónoma Metropolitana","Artículo","Unidad 5","Complementario","Español","https://gestionyestrategia.azc.uam.mx/index.php/rge/article/view/270","Poder, intereses, conflicto y negociación en organizaciones."]
+];
+function drawResources(filter="all"){resourceList.innerHTML=resources.filter(r=>filter==="all"||r[0]===filter).map(r=>`<article class="resource card" data-cat="${r[0]}"><div class="tag">${r[3]} · ${r[4]} · ${r[5]}</div><h3>${r[1]}</h3><p>${r[2]} · Idioma: ${r[6]}</p><p><strong>Úsalo para:</strong> ${r[8]}</p><a target="_blank" rel="noopener noreferrer" href="${r[7]}">Abrir recurso ↗</a></article>`).join("")}
+drawResources();$$("#resFilters button").forEach(b=>b.onclick=()=>{$$("#resFilters button").forEach(x=>x.classList.remove("active"));b.classList.add("active");drawResources(b.dataset.filter)});
+
+// Glossary
+const terms={
+"agencia":"Capacidad de actuar e influir dentro de condiciones y restricciones contextuales.",
+"autonomía":"Grado en que una acción se experimenta como elegida o respaldada por la propia persona; no implica independencia absoluta.",
+"coaching":"Proceso de acompañamiento orientado a reflexión, objetivos, alternativas y acción dentro de un alcance profesional definido.",
+"competencia":"Integración de conocimientos, habilidades y conductas aplicadas en un contexto.",
+"contexto":"Conjunto de condiciones, relaciones, recursos, normas y circunstancias relevantes para interpretar una situación.",
+"creencia":"Proposición que una persona acepta como verdadera o plausible; su grado de respaldo puede variar.",
+"evidencia":"Información utilizada para apoyar, cuestionar o revisar una afirmación.",
+"heurístico":"Atajo de razonamiento que puede ser eficiente y también producir errores sistemáticos según el contexto.",
+"sesgo":"Patrón sistemático de desviación en juicio, atención, memoria o decisión, definido según un marco de referencia.",
+"interpretación":"Significado o explicación atribuida a un evento; puede revisarse a la luz de evidencia adicional.",
+"inferencia":"Conclusión derivada de información disponible mediante un proceso de razonamiento.",
+"narrativa":"Organización de acontecimientos y significados en una estructura que conecta experiencias a través del tiempo.",
+"reencuadre":"Exploración de una interpretación alternativa sin negar los hechos ni imponer optimismo.",
+"autorregulación":"Procesos mediante los cuales una persona orienta, monitorea y ajusta conducta, atención o respuesta hacia metas o demandas.",
+"reevaluación cognitiva":"Estrategia de regulación que modifica la interpretación de una situación para cambiar su impacto emocional.",
+"supresión expresiva":"Estrategia que reduce o inhibe la expresión observable de una emoción ya activada.",
+"interocepción":"Percepción de señales procedentes del interior del organismo.",
+"liderazgo":"Fenómeno relacional y contextual asociado con influencia, coordinación y objetivos.",
+"autoridad":"Facultad o legitimidad reconocida para orientar decisiones o acciones.",
+"poder":"Capacidad de afectar opciones, recursos, consecuencias o conductas dentro de una relación o sistema.",
+"influencia":"Proceso por el que una persona o grupo afecta percepciones, decisiones o acciones de otros.",
+"seguridad psicológica":"Condición de equipo relacionada con la posibilidad de asumir riesgos interpersonales como preguntar, disentir, reconocer errores o pedir ayuda.",
+"posición":"Demanda o resultado explícito que una parte declara querer en una negociación.",
+"interés":"Necesidad, preocupación o razón subyacente que ayuda a explicar una posición.",
+"negociación":"Proceso de interacción mediante el cual partes con intereses relacionados buscan acuerdos sobre decisiones, recursos o acciones.",
+"GROW":"Estructura conversacional: Goal (objetivo), Reality (realidad), Options (opciones) y Will/Way forward (decisión y acción)."
+};
+function drawGloss(q=""){glossary.innerHTML=Object.entries(terms).filter(([k,v])=>(k+" "+v).toLowerCase().includes(q.toLowerCase())).map(([k,v])=>`<div class="term"><strong>${k}</strong>${v}</div>`).join("")}
+drawGloss();glossSearch.addEventListener("input",e=>drawGloss(e.target.value));
+
+// Reflection local storage
+finalReflection.value=localStorage.getItem("ih-final-reflection")||"";
+let timer;finalReflection.addEventListener("input",()=>{clearTimeout(timer);timer=setTimeout(()=>{localStorage.setItem("ih-final-reflection",finalReflection.value);savedMsg.textContent="Reflexión guardada localmente.";setTimeout(()=>savedMsg.textContent="",1800)},350)});
+
+// Accessibility: sync details state is native; save checklists locally is intentionally omitted to avoid storing incidental personal content.
+</script>
+</body></html>
